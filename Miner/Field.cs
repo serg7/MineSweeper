@@ -1,38 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 
 
 namespace Miner
 {
     enum CellState
     {
-        Empty = 1,
+        Empty,
         WithMine,
-        UnSelected
+        Fatal,
+        Selected
     }
-
 
     class Field
     {
-        private CellState[,] _field;
-
-        public CellState[,] GameField
-        {
-            get { return _field; }
-        }
+        public CellState[,] GameField { get; private set; }
 
         public CellState this[int width, int height]
         {
-            get { return _field[width, height];  }
-            set { _field[width, height] = value; }
+            get { return GameField[width, height];  }
+            set { GameField[width, height] = value; }
         }
 
         public Field(int width, int height)
         {         
-            _field = new CellState[width,height];
+            GameField = new CellState[width,height];
             FillCellsWithRandomValues();
         }
 
@@ -41,15 +34,16 @@ namespace Miner
             var values = new CellState[] {CellState.Empty, CellState.WithMine};
             var random = new Random();
 
-            int bound0 = _field.GetUpperBound(0);
-            int bount1 = _field.GetUpperBound(1);
+            int bound0 = GameField.GetUpperBound(0);
+            int bount1 = GameField.GetUpperBound(1);
 
-            for (int i = 0; i <= bound0; i++)
+            for (int i = 1; i <= bound0; i++)
             {
-                for (int j = 0; j <= bount1; j++)
+                for (int j = 1; j <= bount1; j++)
                 {
-                    _field[i, j] = values[random.Next(values.Length)];
-                    var value = _field[i, j];
+                    GameField[i, j] = values[random.Next(values.Length)];
+                    //GameField[i, j] = CellState.Empty;
+                    //var value = GameField[i, j];
                     //Console.WriteLine(value);
                 }
             }

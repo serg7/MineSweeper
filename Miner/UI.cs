@@ -11,6 +11,8 @@ namespace Miner
             int rowLength = field.GetLength(0);
             int colLength = field.GetLength(1);
             int count = 1;
+
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\n");
 
@@ -18,14 +20,20 @@ namespace Miner
             {
                 for (int j = 0; j < colLength; j++)
                 {
-                    if (count.ToString().Length == 1)
+                    if (field[i, j] == CellState.Fatal)
                     {
-                        Console.Write(" {0}  ", count);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(" {0} ", 'X');    
                     }
-                    else if (count.ToString().Length == 2)
+                    else if (field[i, j] == CellState.Selected)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write(" {0} ", 'X');
+                    }
+                    else
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write(" {0} ", count);
+                        Console.Write(" {0} ", 0);
                     }
 
                     count++;

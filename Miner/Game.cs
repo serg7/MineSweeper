@@ -10,14 +10,9 @@ namespace Miner
         private static readonly Game _instance = new Game();
         private Field field; 
 
-        public static Game Instance
-        {
-            get { return _instance; }
-        }
+        public static Game Instance { get { return _instance; } }
 
-        private Game()
-        {
-        }
+        private Game(){}
 
         public void CreateGame(int width, int height)
         {

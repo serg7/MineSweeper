@@ -19,6 +19,11 @@ namespace Miner
     {
         private CellState[,] _field;
 
+        public CellState[,] GameField
+        {
+            get { return _field; }
+        }
+
         public CellState this[int width, int height]
         {
             get { return _field[width, height];  }
@@ -29,7 +34,6 @@ namespace Miner
         {         
             _field = new CellState[width,height];
             FillCellsWithRandomValues();
-            DisplayMatrix();
         }
 
         private void FillCellsWithRandomValues()
@@ -49,35 +53,6 @@ namespace Miner
                     //Console.WriteLine(value);
                 }
             }
-        }
-
-        public void DisplayMatrix()
-        {
-            int rowLength = _field.GetLength(0);
-            int colLength = _field.GetLength(1);
-            int count     = 1;
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\n");
-
-            for (int i = 0; i < rowLength; i++)
-            {
-                for (int j = 0; j < colLength; j++)
-                {
-                    if (count.ToString().Length == 1)
-                    {
-                       Console.Write(" {0}  ", count);
-                    }
-                    else if (count.ToString().Length == 2)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write(" {0} ", count);
-                    }
-                 
-                    count++;
-                }
-                Console.WriteLine("\n");
-            }
-
         }
 
 

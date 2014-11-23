@@ -8,8 +8,8 @@ namespace Miner
     {
         static void Main(string[] args)
         {
-           var miner =  new Miner();
-           miner.CreateGame(4,5);
+       //    var miner =  new Miner.GetInstance();
+        //   miner.CreateGame(4,5);
 
 
             Console.Read();

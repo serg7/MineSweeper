@@ -1,0 +1,7 @@
+C:\Users\Сергей\Documents\Visual Studio 2013\Projects\ISD\Miner\MinerUnitTests\obj\Debug\MinerUnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Сергей\Documents\Visual Studio 2013\Projects\ISD\Miner\MinerUnitTests\bin\Debug\MinerUnitTests.dll
+C:\Users\Сергей\Documents\Visual Studio 2013\Projects\ISD\Miner\MinerUnitTests\bin\Debug\MinerUnitTests.pdb
+C:\Users\Сергей\Documents\Visual Studio 2013\Projects\ISD\Miner\MinerUnitTests\bin\Debug\Miner.exe
+C:\Users\Сергей\Documents\Visual Studio 2013\Projects\ISD\Miner\MinerUnitTests\bin\Debug\Miner.pdb
+C:\Users\Сергей\Documents\Visual Studio 2013\Projects\ISD\Miner\MinerUnitTests\obj\Debug\MinerUnitTests.dll
+C:\Users\Сергей\Documents\Visual Studio 2013\Projects\ISD\Miner\MinerUnitTests\obj\Debug\MinerUnitTests.pdb

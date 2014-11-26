@@ -12,12 +12,12 @@ namespace Miner
 
         public static Game Instance { get { return _instance; } }
 
-        private Game(){}
+        private Game() {}
 
         public void CreateGame(int width, int height)
         {
             field = new Field(width,height);
-            UI.DisplayMatrix(field.GameField);
+            UI.DisplayMatrix(field.GameField, false);
         }
 
         public bool Turn(int i, int j)
@@ -30,13 +30,17 @@ namespace Miner
             {
                 result = true;
                 field[x, y] = CellState.Selected;
+                bool isFatal = false;
+                UI.DisplayMatrix(field.GameField, isFatal);
             }
             else if (field[x, y] == CellState.WithMine)
             {
                 field[x, y] = CellState.Fatal;
+                bool isFatal = true;
+                UI.DisplayMatrix(field.GameField, isFatal);
             }
 
-            UI.DisplayMatrix(field.GameField);
+           
 
             return result;
         }

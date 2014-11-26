@@ -9,7 +9,7 @@ namespace Miner
         static void Main(string[] args)
         {
             var game = Game.Instance;
-            game.CreateGame(5,5);
+            game.CreateGame(5,4);
 
             Console.WriteLine("Your turn:");
             int i = int.Parse(Console.ReadLine());

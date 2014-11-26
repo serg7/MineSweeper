@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Miner\Miner.csproj">
+    <ProjectReference Include="..\Miner\MineSweeper.csproj">
       <Project>{9e20b004-9e6e-4bcb-8110-1bdb5fa73f15}</Project>
-      <Name>Miner</Name>
+      <Name>MineSweeper</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
